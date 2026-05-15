@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jual Aplikasi Premium Murah | Canva Edu, Viu, Netflix, Disney+</title>
+    <meta name="description" content="Tempat jual aplikasi premium murah dan terpercaya. Canva Edu, Viu Premium, Netflix, Disney+, Spotify dan aplikasi premium lainnya.">
+    <meta name="keywords" content="aplikasi premium murah, canva edu murah, netflix premium murah, viu premium murah, disney+ murah">
+    
+    <!-- External Resources -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Inter', 'sans-serif'] },
+                    colors: {
+                        primary: '#3b82f6',
+                        secondary: '#8b5cf6',
+                        darkBg: '#0f172a',
+                        darkCard: '#1e293b',
+                        whatsapp: '#25D366'
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'blob': 'blob 7s infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-15px)' },
+                        },
+                        blob: {
+                            '0%': { transform: 'translate(0px, 0px) scale(1)' },
+                            '33%': { transform: 'translate(30px, -50px) scale(1.1)' },
+                            '66%': { transform: 'translate(-20px, 20px) scale(0.9)' },
+                            '100%': { transform: 'translate(0px, 0px) scale(1)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Custom Styles & Utilities */
+        body { -webkit-font-smoothing: antialiased; }
+        
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        
+        .dark .glass-panel {
+            background: rgba(30, 41, 59, 0.7);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .gradient-text {
+            background: linear-gradient(to right, #3b82f6, #8b5cf6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Scroll Reveal Utility */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
+        .dark ::-webkit-scrollbar-thumb { background: #475569; }
+    </style>
+</head>
+<body class="font-sans bg-slate-50 text-slate-900 dark:bg-darkBg dark:text-slate-100 transition-colors duration-300 overflow-x-hidden relative">
+
+    <div class="fixed inset-0 z-0 overflow-hidden pointer-events-none">
+        <div class="absolute top-0 -left-4 w-72 h-72 bg-purple-300 rounded-full mix-blend-multiply filter blur-2xl opacity-30 animate-blob dark:bg-purple-900 dark:mix-blend-screen dark:opacity-20"></div>
+        <div class="absolute top-0 -right-4 w-72 h-72 bg-blue-300 rounded-full mix-blend-multiply filter blur-2xl opacity-30 animate-blob animation-delay-2000 dark:bg-blue-900 dark:mix-blend-screen dark:opacity-20"></div>
+        <div class="absolute -bottom-8 left-20 w-72 h-72 bg-pink-300 rounded-full mix-blend-multiply filter blur-2xl opacity-30 animate-blob animation-delay-4000 dark:bg-pink-900 dark:mix-blend-screen dark:opacity-20"></div>
+    </div>
+
+    <nav class="fixed w-full z-50 top-0 glass-panel border-b-0 shadow-sm transition-all duration-300" id="navbar">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16 md:h-20">
+                <div class="flex items-center gap-2 cursor-pointer" onclick="window.scrollTo(0,0)">
+                    <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-primary to-secondary text-white flex items-center justify-center shadow-lg">
+                        <i class="fa-solid fa-crown text-sm"></i>
+                    </div>
+                    <span class="font-bold text-xl tracking-tight">App<span class="font-light text-primary dark:text-blue-400">Premium</span></span>
+                </div>
+                
+                <div class="flex items-center gap-3 md:gap-5">
+                    <!-- Copy WA Button -->
+                    <button onclick="copyWA()" class="hidden md:flex items-center gap-2 px-3 py-1.5 rounded-full text-sm font-medium bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors" title="Copy Nomor WhatsApp">
+                        <i class="fa-regular fa-copy text-slate-500 dark:text-slate-400"></i>
+                        <span id="wa-text">085155037227</span>
+                    </button>
+
+                    <!-- Dark Mode Toggle -->
+                    <button id="theme-toggle" class="p-2 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors">
+                        <i class="fa-solid fa-moon dark:hidden"></i>
+                        <i class="fa-solid fa-sun hidden dark:block"></i>
+                    </button>
+
+                    <a href="https://wa.me/6285155037227?text=Hi%20kak%20saya%20ingin%20tanya%20paket%20aplikasi%20premium" target="_blank" class="hidden sm:flex items-center gap-2 px-5 py-2.5 rounded-full bg-gradient-to-r from-primary to-secondary text-white font-semibold text-sm hover:shadow-lg hover:-translate-y-0.5 transition-all">
+                        <i class="fa-brands fa-whatsapp text-lg"></i>
+                        <span>Order Now</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="relative pt-32 pb-16 lg:pt-48 lg:pb-24 z-10">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center reveal">
+            <span class="inline-block py-1 px-3 rounded-full bg-blue-100 dark:bg-blue-900/50 text-blue-600 dark:text-blue-300 text-sm font-semibold mb-4 border border-blue-200 dark:border-blue-800/50">
+                🚀 #1 Layanan Premium Terbaik
+            </span>
+            <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight mb-10 leading-tight">
+                Upgrade Hiburan & Produktivitasmu <br class="hidden md:block" />
+                dengan <span class="gradient-text">Harga Miring</span>
+            </h1>
+            
+            <div class="flex flex-col sm:flex-row justify-center gap-4 mb-16">
+                <a href="#products" class="px-8 py-4 rounded-full bg-slate-900 dark:bg-white text-white dark:text-slate-900 font-bold hover:shadow-xl hover:-translate-y-1 transition-all">
+                    Lihat Daftar Harga
+                </a>
+                <a href="https://wa.me/6285155037227" target="_blank" class="px-8 py-4 rounded-full glass-panel font-bold flex items-center justify-center gap-2 hover:bg-slate-100 dark:hover:bg-slate-800 transition-all">
+                    <i class="fa-brands fa-whatsapp text-whatsapp text-xl"></i> Konsultasi WA
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 relative z-10" id="products">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 reveal">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Pilihan <span class="gradient-text">Paket Premium</span></h2>
+                <p class="text-slate-600 dark:text-slate-400">Pilih aplikasi yang kamu butuhkan, proses kilat tanpa ribet.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                
+                <!-- Canva Edu Lifetime -->
+                <div class="glass-panel rounded-2xl p-6 hover:-translate-y-2 hover:shadow-2xl transition-all duration-300 flex flex-col group reveal">
+                    <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-cyan-400 to-blue-500 text-white flex items-center justify-center mb-5 shadow-lg transform group-hover:scale-110 transition-transform">
+                        <span class="font-bold text-2xl italic">C</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Canva Edu</h3>
+                    <div class="flex items-end gap-1 mb-6">
+                        <span class="text-2xl font-black text-primary dark:text-blue-400">Rp 20.000</span>
+                        <span class="text-sm text-slate-500 dark:text-slate-400 mb-1">/ lifetime</span>
+                    </div>
+                    
+                    <ul class="space-y-3 mb-8 flex-1">
+                        <li class="flex items-start gap-3 text-sm text-slate-700 dark:text-slate-300">
+                            <div class="mt-1 bg-green-100 dark:bg-green-900/30 text-green-500 rounded-full p-0.5"><i class="fa-solid fa-check text-[10px]"></i></div>
+                            Akses jutaan template pro
+                        </li>
+                        <li class="flex items-start gap-3 text-sm text-slate-700 dark:text-slate-300">
+                            <div class="mt-1 bg-green-100 dark:bg-green-900/30 text-green-500 rounded-full p-0.5"><i class="fa-solid fa-check text-[10px]"></i></div>
+                            Fitur edukasi lengkap
+                        </li>
+                        <li class="flex items-start gap-3 text-sm text-slate-700 dark:text-slate-300">
+                            <div class="mt-1 bg-green-100 dark:bg-green-900/30 text-green-500 rounded-full p-0.5"><i class="fa-solid fa-check text-[10px]"></i></div>
+                            Garansi anti-drop
+                        </li>
+                    </ul>
+                    
+                    <a href="https://wa.me/6285155037227?text=Hi%20kak%20mau%20pesan%20Canva%20Edu%20Lifetime%20harga%2020rb" target="_blank" class="w-full py-3 rounded-xl bg-primary hover:bg-blue-600 text-white text-center font-semibold transition-colors shadow-lg shadow-blue-500/30">
+                        Order Canva
+                    </a>
+                </div>
+
+                <!-- Capcut Private -->
+                <div class="glass-panel rounded-2xl p-6 hover:-translate-y-2 hover:shadow-2xl transition-all duration-300 flex flex-col group reveal" style="transition-delay: 100ms;">
+                    <div class="w-12 h-12 rounded-xl bg-slate-900 dark:bg-black text-white flex items-center justify-center mb-5 shadow-lg transform group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-video text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Capcut Private</h3>
+                    <div class="flex items-end gap-1 mb-6">
+                        <span class="text-2xl font-black text-primary dark:text-blue-400">Rp 20.000</span>
+                        <span class="text-sm text-slate-500 dark:text-slate-400 mb-1">/ 1 bulan</span>
+                    </div>
+                    
+                    <ul class="space-y-3 mb-8 flex-1">
+                        <li class="flex items-start gap-3 text-sm text-slate-700 dark:text-slate-300">
+                            <div class="mt-1 bg-green-100 dark:bg-green-900/30 text-green-500 rounded-full p-0.5"><i class="fa-solid fa-check text-[10px]"></i></div>
+                            Akses semua fitur pro
+                        </li>
+                        <li class="flex items-start gap-3 text-sm text-slate-700 dark:text-slate-300">
+                            <div class="mt-1 bg-green-100 dark:bg-green-900/30 text-green-500 rounded-full p-0.5"><i class="fa-solid fa-check text-[10px]"></i></div>
+                            Ekspor no watermark
+                        </li>
+                        <li class="flex items-start gap-3 text-sm text-slate-700 dark:text-slate-300">
+                            <div class="mt-1 bg-green-100 dark:bg-green-900/30 text-green-500 rounded-full p-0.5"><i class="fa-solid fa-check text-[10px]"></i></div>
+                            Akun private, aman
+                        </li>
+                    </ul>
+                    
+                    <a href="https://wa.me/6285155037227?text=Hi%20kak%20mau%20pesan%20Capcut%20Private%201%20Bulan%20harga%2020rb" target="_blank" class="w-full py-3 rounded-xl bg-slate-900 dark:bg-white text-white dark:text-slate-900 hover:bg-slate-800 dark:hover:bg-slate-200 text-center font-semibold transition-colors shadow-lg">
+                        Order Capcut
+                    </a>
+                </div>
+
+                <!-- Viu Privat -->
+                <div class="glass-panel rounded-2xl p-6 hover:-translate-y-2 hover:shadow-2xl transition-all duration-300 flex flex-col group reveal" style="transition-delay: 200ms;">
+                    <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-yellow-400 to-orange-500 text-white flex items-center justify-center mb-5 shadow-lg transform group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-film text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Viu Privat</h3>
+                    <div class="flex items-end gap-1 mb-6">
+                        <span class="text-2xl font-black text-primary dark:text-blue-400">Rp 10.000</span>
+                        <span class="text-sm text-slate-500 dark:text-slate-400 mb-1">/ 6 bulan</span>
+                    </div>
+                    
+                    <ul class="space-y-3 mb-8 flex-1">
+                        <li class="flex items-start gap-3 text-sm text-slate-700 dark:text-slate-300">
+                            <div class="mt-1 bg-green-100 dark:bg-green-900/30 text-green-500 rounded-full p-0.5"><i class="fa-solid fa-check text-[10px]"></i></div>
+                            Nonton drakor no iklan
+                        </li>
+                        <li class="flex items-start gap-3 text-sm text-slate-700 dark:text-slate-300">
+                            <div class="mt-1 bg-green-100 dark:bg-green-900/30 text-green-500 rounded-full p-0.5"><i class="fa-solid fa-check text-[10px]"></i></div>
+                            Download sepuasnya
+                        </li>
+                        <li class="flex items-start gap-3 text-sm text-slate-700 dark:text-slate-300">
+                            <div class="mt-1 bg-green-100 dark:bg-green-900/30 text-green-500 rounded-full p-0.5"><i class="fa-solid fa-check text-[10px]"></i></div>
+                            Resolusi Full HD
+                        </li>
+                    </ul>
+                    
+                    <a href="https://wa.me/6285155037227?text=Hi%20kak%20mau%20pesan%20Viu%206%20Bulan%20Privat%20harga%2010rb" target="_blank" class="w-full py-3 rounded-xl bg-orange-500 hover:bg-orange-600 text-white text-center font-semibold transition-colors shadow-lg shadow-orange-500/30">
+                        Order Viu
+                    </a>
+                </div>
+
+                <!-- Disney+ -->
+                <div class="glass-panel relative overflow-hidden rounded-2xl p-6 hover:-translate-y-2 hover:shadow-2xl transition-all duration-300 flex flex-col group reveal" style="transition-delay: 300ms;">
+                    <!-- Best Seller Badge -->
+                    <div class="absolute top-4 right-[-35px] bg-red-500 text-white text-[10px] font-bold py-1 px-10 transform rotate-45 shadow-sm">
+                        HOT DEAL
+                    </div>
+
+                    <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-800 to-blue-950 text-white flex items-center justify-center mb-5 shadow-lg transform group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-play text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Disney+</h3>
+                    <div class="flex items-end gap-1 mb-6">
+                        <span class="text-2xl font-black text-primary dark:text-blue-400">Rp 25.000</span>
+                        <span class="text-sm text-slate-500 dark:text-slate-400 mb-1">/ 1 bulan</span>
+                    </div>
+                    
+                    <ul class="space-y-3 mb-8 flex-1">
+                        <li class="flex items-start gap-3 text-sm text-slate-700 dark:text-slate-300">
+                            <div class="mt-1 bg-green-100 dark:bg-green-900/30 text-green-500 rounded-full p-0.5"><i class="fa-solid fa-check text-[10px]"></i></div>
+                            Katalog Disney & Marvel
+                        </li>
+                        <li class="flex items-start gap-3 text-sm text-slate-700 dark:text-slate-300">
+                            <div class="mt-1 bg-green-100 dark:bg-green-900/30 text-green-500 rounded-full p-0.5"><i class="fa-solid fa-check text-[10px]"></i></div>
+                            Kualitas 4K Ultra HD
+                        </li>
+                        <li class="flex items-start gap-3 text-sm text-slate-700 dark:text-slate-300">
+                            <div class="mt-1 bg-green-100 dark:bg-green-900/30 text-green-500 rounded-full p-0.5"><i class="fa-solid fa-check text-[10px]"></i></div>
+                            Bisa untuk TV & HP
+                        </li>
+                    </ul>
+                    
+                    <a href="https://wa.me/6285155037227?text=Hi%20kak%20mau%20pesan%20Disney%2B%201%20Bulan%20harga%2025rb" target="_blank" class="w-full py-3 rounded-xl bg-blue-800 hover:bg-blue-900 text-white text-center font-semibold transition-colors shadow-lg shadow-blue-800/30">
+                        Order Disney+
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-10 bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 relative z-10 pb-28 md:pb-10">
+        <div class="max-w-6xl mx-auto px-4 text-center">
+            <div class="flex justify-center items-center gap-2 mb-6 opacity-80">
+                <div class="w-6 h-6 rounded bg-primary text-white flex items-center justify-center">
+                    <i class="fa-solid fa-crown text-[10px]"></i>
+                </div>
+                <span class="font-bold text-lg">AppPremium</span>
+            </div>
+            <p class="text-sm text-slate-500 dark:text-slate-400 max-w-md mx-auto mb-4">
+                Penyedia layanan aplikasi premium murah terlengkap di Indonesia. Temukan penawaran canva edu murah, netflix, dan disney+ hanya di sini.
+            </p>
+            <p class="text-xs text-slate-400 dark:text-slate-500">&copy; <span id="year"></span> AppPremium. All rights reserved.</p>
+        </div>
+    </footer>
+
+    
+    <!-- Floating WhatsApp Icon -->
+    <a href="https://wa.me/6285155037227" target="_blank" class="fixed bottom-24 md:bottom-8 right-6 z-50 w-14 h-14 bg-whatsapp hover:bg-[#128C7E] rounded-full flex items-center justify-center text-white shadow-[0_8px_30px_rgb(37,211,102,0.4)] hover:-translate-y-1 transition-all duration-300" aria-label="Hubungi kami via WhatsApp">
+        <i class="fa-brands fa-whatsapp text-3xl"></i>
+    </a>
+
+    <!-- Fake Live Order Notification -->
+    <div id="live-toast" class="fixed bottom-24 md:bottom-8 left-4 z-40 transform translate-y-[150%] opacity-0 transition-all duration-500 glass-panel rounded-xl shadow-lg p-3 flex items-center gap-3 w-72 pointer-events-none">
+        <div class="w-10 h-10 rounded-full bg-green-100 dark:bg-green-900/50 flex items-center justify-center text-green-600 dark:text-green-400 shrink-0">
+            <i class="fa-solid fa-bag-shopping"></i>
+        </div>
+        <div class="flex-1 min-w-0">
+            <p class="text-sm font-semibold text-slate-900 dark:text-white truncate" id="toast-name">Seseorang dari Jakarta</p>
+            <p class="text-xs text-slate-500 dark:text-slate-400 truncate">Baru saja membeli <span id="toast-product" class="font-bold text-primary">Canva Edu</span></p>
+            <p class="text-[10px] text-slate-400 mt-0.5" id="toast-time">Beberapa detik lalu</p>
+        </div>
+    </div>
+
+    <!-- Mobile Sticky CTA Bottom -->
+    <div class="fixed bottom-0 left-0 right-0 p-4 glass-panel border-t border-slate-200 dark:border-slate-800 z-40 md:hidden flex justify-between items-center">
+        <div class="flex flex-col">
+            <span class="text-xs text-slate-500 dark:text-slate-400">Mulai dari</span>
+            <span class="font-bold text-primary dark:text-blue-400 text-lg">Rp 10.000</span>
+        </div>
+        <a href="https://wa.me/6285155037227" target="_blank" class="px-6 py-2.5 rounded-full bg-primary text-white font-bold text-sm shadow-lg shadow-blue-500/30 flex items-center gap-2">
+            <i class="fa-brands fa-whatsapp"></i> Chat Admin
+        </a>
+    </div>
+
+    <script>
+        // Set Current Year in Footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // 1. Dark Mode Toggle Logic
+        const themeToggleBtn = document.getElementById('theme-toggle');
+        
+        // Cek preferensi sistem atau local storage
+        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark');
+        }
+
+        themeToggleBtn.addEventListener('click', function() {
+            document.documentElement.classList.toggle('dark');
+            if(document.documentElement.classList.contains('dark')) {
+                localStorage.theme = 'dark';
+            } else {
+                localStorage.theme = 'light';
+            }
+        });
+
+        // 2. Scroll Reveal Animation using Intersection Observer
+        const revealElements = document.querySelectorAll('.reveal');
+        const revealObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    observer.unobserve(entry.target); // hanya animasi sekali
+                }
+            });
+        }, { threshold: 0.15, rootMargin: "0px 0px -50px 0px" });
+
+        revealElements.forEach(el => revealObserver.observe(el));
+
+        // 3. Navbar Blur/Border on Scroll
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 20) {
+                navbar.classList.add('shadow-sm');
+                // Adjust glass panel opacity when scrolled
+            } else {
+                navbar.classList.remove('shadow-sm');
+            }
+        });
+
+        // 4. Copy WA Number Function with Visual Feedback
+        function copyWA() {
+            const waNumber = '085155037227';
+            const btnText = document.getElementById('wa-text');
+            const icon = btnText.previousElementSibling;
+
+            // Fallback for document.execCommand if clipboard API fails/iframe
+            const copyToClipboardFallback = (text) => {
+                const textArea = document.createElement("textarea");
+                textArea.value = text;
+                document.body.appendChild(textArea);
+                textArea.focus();
+                textArea.select();
+                try {
+                    document.execCommand('copy');
+                } catch (err) {
+                    console.error('Fallback: Oops, unable to copy', err);
+                }
+                document.body.removeChild(textArea);
+            };
+
+            if (navigator.clipboard && window.isSecureContext) {
+                navigator.clipboard.writeText(waNumber).catch(() => copyToClipboardFallback(waNumber));
+            } else {
+                copyToClipboardFallback(waNumber);
+            }
+
+            // Visual feedback
+            const originalText = btnText.innerText;
+            btnText.innerText = 'Tersalin!';
+            icon.classList.replace('fa-copy', 'fa-check');
+            icon.classList.add('text-green-500');
+            
+            setTimeout(() => {
+                btnText.innerText = originalText;
+                icon.classList.replace('fa-check', 'fa-copy');
+                icon.classList.remove('text-green-500');
+            }, 2000);
+        }
+
+        // 6. Fake Live Order Notification Logic
+        const toast = document.getElementById('live-toast');
+        const toastName = document.getElementById('toast-name');
+        const toastProduct = document.getElementById('toast-product');
+        const toastTime = document.getElementById('toast-time');
+
+        const fakeData = [
+            { name: 'Budi dari Jakarta', product: 'Canva Edu', time: 'Baru saja' },
+            { name: 'Siti dari Bandung', product: 'Viu Privat 6 Bulan', time: '1 menit lalu' },
+            { name: 'Andi dari Surabaya', product: 'Disney+ 1 Bulan', time: '3 menit lalu' },
+            { name: 'Rina dari Medan', product: 'Capcut Private', time: 'Beberapa detik lalu' },
+            { name: 'Seseorang dari Jogja', product: 'Canva Edu', time: 'Baru saja' }
+        ];
+
+        function showToast() {
+            // Pick random data
+            const data = fakeData[Math.floor(Math.random() * fakeData.length)];
+            toastName.textContent = data.name;
+            toastProduct.textContent = data.product;
+            toastTime.textContent = data.time;
+
+            // Show toast (remove translate/opacity classes)
+            toast.classList.remove('translate-y-[150%]', 'opacity-0');
+            
+            // Hide after 4 seconds
+            setTimeout(() => {
+                toast.classList.add('translate-y-[150%]', 'opacity-0');
+            }, 4000);
+        }
+
+        // Mulai memunculkan notifikasi setelah 3 detik halaman dimuat
+        setTimeout(() => {
+            showToast();
+            // Ulangi setiap 12 - 20 detik secara random
+            setInterval(showToast, Math.floor(Math.random() * (20000 - 12000 + 1) + 12000));
+        }, 3000);
+
+    </script>
+</body>
+</html>
